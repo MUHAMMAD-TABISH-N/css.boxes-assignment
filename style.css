@@ -1,0 +1,66 @@
+/* Product Card Styling */
+.product-card {
+    background-color: #f8f9fa; /* Light gray background for the card */
+    width: 300px; /* Fixed width */
+    min-height: 250px; /* Ensures a minimum height for smaller content */
+    margin: 20px auto; /* Center the card and add spacing around it */
+    padding: 20px; /* Spacing between the content and border */
+    border-radius: 12px; /* Rounded corners for soft edges */
+    border: 3px solid #917373; /* Light gray border for contrast */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-image: url('decorative-border.png') 30 stretch; /* Decorative border */
+    background-clip: padding-box; /* Ensures content stays inside the border */
+    position: relative; /* Required for positioning child elements */
+    text-align: center; /* Center aligns all text and elements */
+  }
+  
+  /* Product Image */
+  .product-card img {
+    width: 100%; /* Full width of the card */
+    max-height: 180px; /* Restricts height to maintain proportions */
+    object-fit: cover; /* Ensures the image is cropped proportionally */
+    border-radius: 8px; /* Matches the card's rounded corners */
+    margin-bottom: 15px; /* Space below the image */
+  }
+  
+  /* Product Title */
+  .product-title {
+    font-size: 18px; /* Increase font size for visibility */
+    font-weight: bold; /* Make the title stand out */
+    margin: 10px 0; /* Space above and below the title */
+    color: #333; /* Dark gray for text readability */
+    text-align: center; /* Align the title to the center */
+  }
+  
+  /* Product Description */
+  .product-description {
+    max-height: 80px; /* Restrict the height of the description */
+    overflow-y: auto; /* Scroll when content exceeds the height */
+    font-size: 14px; /* Smaller font size for description */
+    color: #555; /* Slightly muted text color */
+    line-height: 1.6; /* Add line spacing for readability */
+    margin-bottom: 15px; /* Space below the description */
+  }
+  
+  /* Product Price */
+  .product-price {
+    visibility: hidden; /* Hide the price initially */
+    position: absolute; /* Position relative to the card */
+    bottom: 20px; /* Place near the bottom */
+    right: 20px; /* Position to the right */
+    background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+    padding: 5px 10px; /* Add some spacing around the price */
+    border-radius: 4px; /* Rounded corners for a modern look */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #007bff; /* Primary blue color for the price */
+    opacity: 0; /* Smooth transition effect */
+    transition: visibility 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .product-card:hover .product-price {
+    visibility: visible; /* Display the price on hover */
+    opacity: 1; /* Smooth fade-in effect */
+  }
+  
+  
+  
